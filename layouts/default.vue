@@ -86,6 +86,11 @@ export default {
           icon: 'mdi-human-handsup',
           title: 'Reiki Mokymai 🌍',
           to: '/reikimokymai'
+        },
+        {
+          icon: 'mdi-human-handsup',
+          title: 'Seansų užsakymas 🌍',
+          to: '/uzsakymas'
         }
       ],
       miniVariant: false,

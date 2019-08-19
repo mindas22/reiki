@@ -22,7 +22,7 @@
         <h4 class="ma-5">Cia bus reiki medis</h4>
         <h4 class="ma-5">Cia bus reiki medis</h4>
 
-        <v-img src="/virgis.jpg"></v-img>
+        <v-img height="350" contain src="/virgis.jpg"></v-img>
       </v-card>
     </v-flex>
     <v-flex md5 offset-md2>
@@ -47,7 +47,7 @@
         <h4 class="ma-5">Cia bus reiki medis</h4>
         <h4 class="ma-5">Cia bus reiki medis</h4>
 
-        <v-img src="/mindaugas.jpg"></v-img>
+        <v-img height="350" contain src="/mindaugas.jpg"></v-img>
       </v-card>
     </v-flex>
   </v-layout>
