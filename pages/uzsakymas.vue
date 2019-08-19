@@ -2,14 +2,77 @@
   <v-content>
     <v-layout>
       <v-flex>
-        <v-stepper v-model="e6" vertical>
+        <v-stepper v-model="e1">
+          <v-stepper-header>
+            <v-stepper-step :complete="e1 > 1" step="1"
+              >Name of step 1</v-stepper-step
+            >
+
+            <v-divider></v-divider>
+
+            <v-stepper-step :complete="e1 > 2" step="2"
+              >Name of step 2</v-stepper-step
+            >
+
+            <v-divider></v-divider>
+
+            <v-stepper-step step="3">Name of step 3</v-stepper-step>
+          </v-stepper-header>
+
+          <v-stepper-items>
+            <v-stepper-content step="1">
+              <v-card
+                class="mb-12"
+                color="grey lighten-1"
+                height="200px"
+              ></v-card>
+
+              <v-btn color="primary" @click="e1 = 2">
+                Continue
+              </v-btn>
+
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
+
+            <v-stepper-content step="2">
+              <v-card
+                class="mb-12"
+                color="grey lighten-1"
+                height="200px"
+              ></v-card>
+
+              <v-btn color="primary" @click="e1 = 3">
+                Continue
+              </v-btn>
+
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
+
+            <v-stepper-content step="3">
+              <v-card
+                class="mb-12"
+                color="grey lighten-1"
+                height="200px"
+              ></v-card>
+
+              <v-btn color="primary" @click="e1 = 1">
+                Continue
+              </v-btn>
+
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
+          </v-stepper-items>
+        </v-stepper>
+        <v-spacer></v-spacer>
+        <h3>Vertikalus pasirinkimas</h3>
+        <v-stepper v-model="e6" class="mt-4" vertical>
           <v-stepper-step :complete="e6 > 1" step="1">
             Reiki seansai
-            <small>Summarize if needed</small>
+            <small>paririnkti intencija</small>
           </v-stepper-step>
 
           <v-stepper-content step="1">
-            <v-card color="grey lighten-1" class="mb-12" height="200px">
+            <v-card color="light-green darken-1" class="mb-12" height="250px">
               Kazkas apie reiki seansus cia?
               <p class="pa-2">
                 Cupidatat reprehenderit sit ad et ipsum laboris magna occaecat
@@ -27,12 +90,12 @@
             <v-btn text>Atšaukti</v-btn>
           </v-stepper-content>
 
-          <v-stepper-step :complete="e6 > 2" step="2"
+          <v-stepper-step editable :complete="e6 > 2" step="2"
             >Pasirinkti intenciją</v-stepper-step
           >
 
           <v-stepper-content step="2">
-            <v-card color="grey lighten-1" class="mb-12" height="200px">
+            <v-card color="green darken-1" class="mb-12" height="250px">
               Sritys Sveikata Santykiai Sekme darbe Kita sritis... (užpildo
               žmogus pats)
             </v-card>
@@ -46,9 +109,9 @@
 
           <v-stepper-content step="3">
             <v-card
-              color="grey lighten-1"
+              color="green lighten-1"
               class="mb-12"
-              height="200px"
+              height="250px"
             ></v-card>
             <v-btn color="primary" @click="e6 = 4">Tęsti</v-btn>
             <v-btn text>Atšaukti</v-btn>
@@ -57,9 +120,9 @@
           <v-stepper-step step="4">View setup instructions</v-stepper-step>
           <v-stepper-content step="4">
             <v-card
-              color="grey lighten-1"
+              color="green lighten-2"
               class="mb-12"
-              height="200px"
+              height="250px"
             ></v-card>
             <v-btn color="primary" @click="e6 = 1">Tęsti</v-btn>
             <v-btn text>Atšaukti</v-btn>
@@ -103,6 +166,7 @@
 export default {
   data() {
     return {
+      e1: 0,
       e6: 1
     }
   }
