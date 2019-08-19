@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout wrap>
     <v-flex md5>
       <v-card class="pa-3 ma-2 elevation-5">
         <h2>Virginijus Mockus</h2>
