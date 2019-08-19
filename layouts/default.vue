@@ -74,13 +74,18 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Pradzia',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: 'apie',
+          to: '/apie'
+        },
+        {
+          icon: 'mdi-human-handsup',
+          title: 'Reiki Mokymai 🌍',
+          to: '/reikimokymai'
         }
       ],
       miniVariant: false,
